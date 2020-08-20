@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeedIncrease : CollectibleBase
 {
-    [SerializeField] float _speedAmount = 5;
+    [SerializeField] float _speedAmount = 3;
 
     protected override void Collect(Player player)
     {
@@ -13,6 +13,7 @@ public class SpeedIncrease : CollectibleBase
         {
             _motor.MaxSpeed += _speedAmount;
         }
+        player.CheckSpeed(_speedAmount);
     }
 
     protected override void Movement(Rigidbody rb)

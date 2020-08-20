@@ -8,6 +8,7 @@ public abstract class PowerUpBase : MonoBehaviour
     protected abstract void PowerUp(Player player);
     protected abstract void PowerDown(Player player);
     [SerializeField] float powerupDuration;
+    //created a property for Invincibiltiy to get time duration.
     protected float PDuration { get { return powerupDuration; } }
     [SerializeField] ParticleSystem _powerParticles;
     [SerializeField] AudioClip _powerSound;
@@ -27,13 +28,14 @@ public abstract class PowerUpBase : MonoBehaviour
     {
         if (_powerParticles != null)
         {
-            _powerParticles = Instantiate(_powerParticles, transform.position, Quaternion.identity);
+            //needed the particles to face upward
+            _powerParticles = Instantiate(_powerParticles, transform.position, Quaternion.LookRotation(Vector3.up));
 
         }
 
         if (_powerSound != null)
         {
-            AudioHelper.PlayClip2D(_powerSound, 1f);
+            AudioHelper.PlayClip2D(_powerSound, .5f);
         }
     }
     protected void DisableSelf()

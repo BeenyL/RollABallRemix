@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] int _damageAmount = 1;
+    //converted _damageAmount to a property for Bouncer to use.
     protected int Damage { get { return _damageAmount; } }
 
     [SerializeField] ParticleSystem _impactParticles;

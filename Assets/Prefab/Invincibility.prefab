@@ -123,7 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d522aeb9dd072f4f8a1763686d5e471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupDuration: 2
-  _powerParticles: {fileID: 0}
-  _powerSound: {fileID: 0}
+  powerupDuration: 3
+  _powerParticles: {fileID: 3566054333745737430, guid: 3b567d593b79e794caaf905ee27abc45,
+    type: 3}
+  _powerSound: {fileID: 8300000, guid: 4c6cdbf6e9719294d84d55fedad54e68, type: 3}
   ChangedColor: {r: 1, g: 1, b: 1, a: 1}
+  DefaultColor: {r: 0, g: 0.8180356, b: 1, a: 1}

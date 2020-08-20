@@ -12,6 +12,7 @@ public class HealthIncrease : CollectibleBase
     }
     protected override void Movement(Rigidbody rb)
     {
+        //-MovementSpeed to change the direction to the opposite direction for variety within the collectible.
         Quaternion turnOffset = Quaternion.Euler
             (-MovementSpeed, -MovementSpeed, -MovementSpeed);
         rb.MoveRotation(rb.rotation * turnOffset);

@@ -17,6 +17,7 @@ public abstract class CollectibleBase : MonoBehaviour
 
     private void Awake()
     {
+
         _rb = GetComponent<Rigidbody>();
     }
 
@@ -47,13 +48,14 @@ public abstract class CollectibleBase : MonoBehaviour
     {
         if(_collectParticles != null)
         {
-            _collectParticles = Instantiate(_collectParticles, transform.position, Quaternion.identity);
+            //needed the particles to face upward
+            _collectParticles = Instantiate(_collectParticles, transform.position, Quaternion.LookRotation(Vector3.up));
 
         }
 
         if(_collectSound != null)
         {
-            AudioHelper.PlayClip2D(_collectSound, 1f);
+            AudioHelper.PlayClip2D(_collectSound, .25f);
         }
     }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2733952912135186628}
   - component: {fileID: 2733952912135186629}
   m_Layer: 0
-  m_Name: Clash
+  m_Name: E_Clash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

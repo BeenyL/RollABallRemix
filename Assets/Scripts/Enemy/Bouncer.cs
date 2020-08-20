@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bouncer : Enemy
 {
     [SerializeField] float PushForce = 100f;
+    //override PlayerImpact adding knockback on top of damaging player.
     protected override void PlayerImpact(Player player)
     {
         player.DecreaseHealth(Damage);
